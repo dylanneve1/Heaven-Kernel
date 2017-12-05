@@ -1,0 +1,11 @@
+Loading configuration
+
+make: /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+Kconfig:15:warning: environment variable ANDROID_MAJOR_VERSION undefined
+***
+*** Can't find default configuration "arch/arm64/configs/SuperKernel-hero2lte_defconfig"!
+***
+scripts/kconfig/Makefile:105: recipe for target 'SuperKernel-hero2lte_defconfig' failed
+make[1]: *** [SuperKernel-hero2lte_defconfig] Error 1
+Makefile:572: recipe for target 'SuperKernel-hero2lte_defconfig' failed
+make: *** [SuperKernel-hero2lte_defconfig] Error 2

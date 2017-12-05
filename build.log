@@ -1,0 +1,21 @@
+
+==============================================
+START : FUNC_BUILD_KERNEL
+==============================================
+
+build common config=SuperKernel-herolte_defconfig 
+build model config=herolte 
+rm files in : /home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/dts/*.dtb
+rm: cannot remove '/home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/dts/*.dtb': No such file or directory
+rm: cannot remove '/home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/dtb/*.dtb': No such file or directory
+rm: cannot remove '/home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/boot.img-dtb': No such file or directory
+rm: cannot remove '/home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/boot.img-zImage': No such file or directory
+make: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+Kconfig:15:warning: environment variable ANDROID_MAJOR_VERSION undefined
+***
+*** Can't find default configuration "arch/arm64/configs/SuperKernel-herolte_defconfig"!
+***
+scripts/kconfig/Makefile:105: recipe for target 'SuperKernel-herolte_defconfig' failed
+make[1]: *** [SuperKernel-herolte_defconfig] Error 1
+Makefile:572: recipe for target 'SuperKernel-herolte_defconfig' failed
+make: *** [SuperKernel-herolte_defconfig] Error 2
