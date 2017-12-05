@@ -2,10 +2,34 @@ Loading configuration
 
 make: /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
 Kconfig:15:warning: environment variable ANDROID_MAJOR_VERSION undefined
-***
-*** Can't find default configuration "arch/arm64/configs/SuperKernel-herolte_defconfig"!
-***
-scripts/kconfig/Makefile:105: recipe for target 'SuperKernel-herolte_defconfig' failed
-make[1]: *** [SuperKernel-herolte_defconfig] Error 1
-Makefile:572: recipe for target 'SuperKernel-herolte_defconfig' failed
-make: *** [SuperKernel-herolte_defconfig] Error 2
+#
+# configuration written to .config
+#
+
+Compiling zImage
+
+make: /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+make: /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+make[1]: /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+Kconfig:15:warning: environment variable ANDROID_MAJOR_VERSION undefined
+make: /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+make: /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+INFO: CC is /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc
+/bin/sh: 1: /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc: not found
+scripts/Makefile.build:257: recipe for target 'scripts/mod/empty.o' failed
+make[2]: *** [scripts/mod/empty.o] Error 127
+scripts/Makefile.build:402: recipe for target 'scripts/mod' failed
+make[1]: *** [scripts/mod] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from scripts/sortextable.c:192:0:
+scripts/sortextable.h: In function ‘do32’:
+scripts/sortextable.h:107:12: warning: variable ‘sort_done_location’ set but not used [-Wunused-but-set-variable]
+  uint32_t *sort_done_location;
+            ^
+In file included from scripts/sortextable.c:194:0:
+scripts/sortextable.h: In function ‘do64’:
+scripts/sortextable.h:107:12: warning: variable ‘sort_done_location’ set but not used [-Wunused-but-set-variable]
+  uint32_t *sort_done_location;
+            ^
+Makefile:586: recipe for target 'scripts' failed
+make: *** [scripts] Error 2
