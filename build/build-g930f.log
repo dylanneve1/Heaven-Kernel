@@ -21,6 +21,12 @@ make[2]: *** [scripts/mod/empty.o] Error 127
 scripts/Makefile.build:402: recipe for target 'scripts/mod' failed
 make[1]: *** [scripts/mod] Error 2
 make[1]: *** Waiting for unfinished jobs....
+/bin/sh: 1: /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc: not found
+Kbuild:35: recipe for target 'kernel/bounds.s' failed
+make[1]: *** [kernel/bounds.s] Error 127
+Makefile:1041: recipe for target 'prepare0' failed
+make: *** [prepare0] Error 2
+make: *** Waiting for unfinished jobs....
 In file included from scripts/sortextable.c:192:0:
 scripts/sortextable.h: In function ‘do32’:
 scripts/sortextable.h:107:12: warning: variable ‘sort_done_location’ set but not used [-Wunused-but-set-variable]
