@@ -10,38 +10,130 @@ rm: cannot remove '/home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/dts/*.dtb':
 rm: cannot remove '/home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/dtb/*.dtb': No such file or directory
 rm: cannot remove '/home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/boot.img-dtb': No such file or directory
 rm: cannot remove '/home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/boot.img-zImage': No such file or directory
-make: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
 #
 # configuration written to .config
 #
-make: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
-make: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
-make[1]: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
 scripts/kconfig/conf --silentoldconfig Kconfig
-make: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
-make: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
 INFO: CC is ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc
   CHK     include/config/kernel.release
+  WRAP    arch/arm64/include/generated/asm/bug.h
+  WRAP    arch/arm64/include/generated/asm/checksum.h
+  WRAP    arch/arm64/include/generated/asm/bugs.h
+  WRAP    arch/arm64/include/generated/asm/clkdev.h
+  WRAP    arch/arm64/include/generated/asm/cputime.h
+  WRAP    arch/arm64/include/generated/asm/current.h
+  WRAP    arch/arm64/include/generated/asm/delay.h
+  WRAP    arch/arm64/include/generated/asm/div64.h
+  WRAP    arch/arm64/include/generated/asm/dma.h
   CHK     include/generated/uapi/linux/version.h
+  WRAP    arch/arm64/include/generated/asm/dma-contiguous.h
+  WRAP    arch/arm64/include/generated/asm/early_ioremap.h
+  WRAP    arch/arm64/include/generated/asm/emergency-restart.h
+  WRAP    arch/arm64/include/generated/asm/errno.h
+  WRAP    arch/arm64/include/generated/asm/ftrace.h
+  WRAP    arch/arm64/include/generated/asm/hash.h
+  WRAP    arch/arm64/include/generated/asm/hw_irq.h
+  UPD     include/generated/uapi/linux/version.h
+  WRAP    arch/arm64/include/generated/asm/ioctl.h
+  WRAP    arch/arm64/include/generated/asm/ioctls.h
+  WRAP    arch/arm64/include/generated/asm/ipcbuf.h
+  WRAP    arch/arm64/include/generated/asm/kdebug.h
+  WRAP    arch/arm64/include/generated/asm/irq_regs.h
+  WRAP    arch/arm64/include/generated/asm/kvm_para.h
+  WRAP    arch/arm64/include/generated/asm/kmap_types.h
+  WRAP    arch/arm64/include/generated/asm/local.h
+  WRAP    arch/arm64/include/generated/asm/local64.h
+  WRAP    arch/arm64/include/generated/asm/mcs_spinlock.h
+  WRAP    arch/arm64/include/generated/asm/mman.h
+  WRAP    arch/arm64/include/generated/asm/msgbuf.h
+  WRAP    arch/arm64/include/generated/asm/mutex.h
+  WRAP    arch/arm64/include/generated/asm/pci.h
+  WRAP    arch/arm64/include/generated/asm/pci-bridge.h
+  WRAP    arch/arm64/include/generated/asm/poll.h
+  WRAP    arch/arm64/include/generated/asm/preempt.h
+  WRAP    arch/arm64/include/generated/asm/resource.h
+  WRAP    arch/arm64/include/generated/asm/scatterlist.h
+  WRAP    arch/arm64/include/generated/asm/rwsem.h
+  WRAP    arch/arm64/include/generated/asm/segment.h
+  UPD     include/config/kernel.release
+  WRAP    arch/arm64/include/generated/asm/sections.h
+  WRAP    arch/arm64/include/generated/asm/sembuf.h
+  WRAP    arch/arm64/include/generated/asm/serial.h
+  WRAP    arch/arm64/include/generated/asm/shmbuf.h
+  WRAP    arch/arm64/include/generated/asm/simd.h
+  WRAP    arch/arm64/include/generated/asm/sizes.h
+  WRAP    arch/arm64/include/generated/asm/socket.h
+  WRAP    arch/arm64/include/generated/asm/sockios.h
+  WRAP    arch/arm64/include/generated/asm/swab.h
+  WRAP    arch/arm64/include/generated/asm/switch_to.h
+  WRAP    arch/arm64/include/generated/asm/termbits.h
+  WRAP    arch/arm64/include/generated/asm/termios.h
+  WRAP    arch/arm64/include/generated/asm/topology.h
+  WRAP    arch/arm64/include/generated/asm/trace_clock.h
+  WRAP    arch/arm64/include/generated/asm/types.h
+  WRAP    arch/arm64/include/generated/asm/unaligned.h
+  WRAP    arch/arm64/include/generated/asm/user.h
+  WRAP    arch/arm64/include/generated/asm/vga.h
+  WRAP    arch/arm64/include/generated/asm/xor.h
   CHK     include/generated/utsrelease.h
+  WRAP    arch/arm64/include/generated/uapi/asm/kvm_para.h
+  UPD     include/generated/utsrelease.h
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/sortextable
+  HOSTCC  scripts/dtc/dtc.o
   CC      scripts/mod/empty.o
-/bin/sh: 1: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: not found
-scripts/Makefile.build:257: recipe for target 'scripts/mod/empty.o' failed
-make[2]: *** [scripts/mod/empty.o] Error 127
-make[2]: *** Waiting for unfinished jobs....
+  HOSTCC  scripts/dtc/flattree.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  HOSTCC  scripts/selinux/mdp/mdp
+  HOSTCC  scripts/selinux/genheaders/genheaders
+In file included from scripts/sortextable.c:192:0:
+scripts/sortextable.h: In function ‘do32’:
+scripts/sortextable.h:107:12: warning: variable ‘sort_done_location’ set but not used [-Wunused-but-set-variable]
+  uint32_t *sort_done_location;
+            ^
+In file included from scripts/sortextable.c:194:0:
+scripts/sortextable.h: In function ‘do64’:
+scripts/sortextable.h:107:12: warning: variable ‘sort_done_location’ set but not used [-Wunused-but-set-variable]
+  uint32_t *sort_done_location;
+            ^
   CC      scripts/mod/devicetable-offsets.s
-/bin/sh: 1: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: not found
+In file included from include/linux/compiler.h:54:0,
+                 from include/uapi/linux/stddef.h:1,
+                 from include/linux/stddef.h:4,
+                 from ./include/uapi/linux/posix_types.h:4,
+                 from include/uapi/linux/types.h:13,
+                 from include/linux/types.h:5,
+                 from include/linux/mod_devicetable.h:11,
+                 from scripts/mod/devicetable-offsets.c:2:
+include/linux/compiler-gcc.h:106:1: fatal error: linux/compiler-gcc7.h: No such file or directory
+ #include gcc_header(__GNUC__)
+ ^~~~
+compilation terminated.
 scripts/Makefile.build:153: recipe for target 'scripts/mod/devicetable-offsets.s' failed
-make[2]: *** [scripts/mod/devicetable-offsets.s] Error 127
+make[2]: *** [scripts/mod/devicetable-offsets.s] Error 1
+make[2]: *** Waiting for unfinished jobs....
+  HOSTCC  scripts/dtc/fstree.o
 scripts/Makefile.build:402: recipe for target 'scripts/mod' failed
 make[1]: *** [scripts/mod] Error 2
 make[1]: *** Waiting for unfinished jobs....
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/dtc/checks.o
+  HOSTCC  scripts/dtc/util.o
+  SHIPPED scripts/dtc/dtc-lexer.lex.c
+  SHIPPED scripts/dtc/dtc-parser.tab.h
+  SHIPPED scripts/dtc/dtc-parser.tab.c
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  HOSTLD  scripts/dtc/dtc
 Makefile:590: recipe for target 'scripts' failed
 make: *** [scripts] Error 2
-make: *** Waiting for unfinished jobs....
-  CC      kernel/bounds.s
-/bin/sh: 1: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: not found
-Kbuild:35: recipe for target 'kernel/bounds.s' failed
-make[1]: *** [kernel/bounds.s] Error 127
-Makefile:1052: recipe for target 'prepare0' failed
-make: *** [prepare0] Error 2
