@@ -1,0 +1,536 @@
+Loading configuration
+
+#
+# configuration written to .config
+#
+
+Compiling zImage
+
+INFO: CC is /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc
+In file included from scripts/sortextable.c:192:0:
+scripts/sortextable.h: In function ‘do32’:
+scripts/sortextable.h:107:12: warning: variable ‘sort_done_location’ set but not used [-Wunused-but-set-variable]
+  uint32_t *sort_done_location;
+            ^
+In file included from scripts/sortextable.c:194:0:
+scripts/sortextable.h: In function ‘do64’:
+scripts/sortextable.h:107:12: warning: variable ‘sort_done_location’ set but not used [-Wunused-but-set-variable]
+  uint32_t *sort_done_location;
+            ^
+kernel/sched/fair.c: In function 'move_specific_task':
+kernel/sched/fair.c:9123:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  if (throttled_lb_pair(task_group(p), env->src_rq->cpu,
+  ^~
+kernel/sched/fair.c:9127:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   if (!hmp_can_migrate_task(p, env))
+   ^~
+In file included from include/linux/printk.h:6:0,
+                 from include/linux/kernel.h:13,
+                 from include/linux/sched.h:17,
+                 from ./arch/arm64/include/asm/compat.h:25,
+                 from drivers/base/dma-contiguous.c:22:
+drivers/base/dma-contiguous.c: In function 'dma_alloc_from_contiguous':
+include/linux/kern_levels.h:4:18: warning: format '%d' expects argument of type 'int', but argument 4 has type 'size_t {aka long unsigned int}' [-Wformat=]
+ #define KERN_SOH "\001"  /* ASCII Start Of Header */
+                  ^
+include/linux/kern_levels.h:14:20: note: in expansion of macro 'KERN_SOH'
+ #define KERN_DEBUG KERN_SOH "7" /* debug-level messages */
+                    ^~~~~~~~
+include/linux/printk.h:300:12: note: in expansion of macro 'KERN_DEBUG'
+  no_printk(KERN_DEBUG pr_fmt(fmt), ##__VA_ARGS__)
+            ^~~~~~~~~~
+drivers/base/dma-contiguous.c:353:2: note: in expansion of macro 'pr_debug'
+  pr_debug("%s(cma %p, count %d, align %d)\n", __func__, (void *)cma,
+  ^~~~~~~~
+drivers/base/dma-contiguous.c:353:30: note: format string is defined here
+  pr_debug("%s(cma %p, count %d, align %d)\n", __func__, (void *)cma,
+                             ~^
+                             %ld
+kernel/trace/trace_output.c: In function 'trace_graph_ret_raw':
+kernel/trace/trace_output.c:976:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  if (!trace_seq_printf(&iter->seq, "%lx %lld %lld %ld %d\n",
+  ^~
+kernel/trace/trace_output.c:982:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   return TRACE_TYPE_PARTIAL_LINE;
+   ^~~~~~
+fs/ecryptfs/ecryptfs_dek.c: In function 'ecryptfs_update_crypt_flag':
+fs/ecryptfs/ecryptfs_dek.c:361:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+     if(list_empty(&crypt_stat->keysig_list))
+     ^~
+fs/ecryptfs/ecryptfs_dek.c:364:2: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  mutex_lock(&crypt_stat->cs_mutex);
+  ^~~~~~~~~~
+drivers/cpufreq/cpufreq_zzmoove.c: In function 'store_sampling_rate_idle_delay':
+drivers/cpufreq/cpufreq_zzmoove.c:3038:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  if (input == 0)
+  ^~
+drivers/cpufreq/cpufreq_zzmoove.c:3040:6: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+      sampling_rate_step_down_delay = 0;
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+drivers/cpufreq/cpufreq_zzmoove.c: In function 'dbs_check_cpu':
+drivers/cpufreq/cpufreq_zzmoove.c:7745:6: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+      if (zz_sampling_down_max_mom == 0 && zz_sampling_down_factor > 1)
+      ^~
+drivers/cpufreq/cpufreq_zzmoove.c:7749:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   if (dbs_tuners_ins.freq_limit != 0
+   ^~
+drivers/cpufreq/cpufreq_zzmoove.c:7768:6: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+      if (zz_sampling_down_max_mom != 0 && policy->cur < policy->max)
+      ^~
+drivers/cpufreq/cpufreq_zzmoove.c:7771:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   this_dbs_info->requested_freq = zz_get_next_freq(policy->cur, 1, max_load);
+   ^~~~~~~~~~~~~
+drivers/cpufreq/cpufreq_zzmoove.c: In function 'cpufreq_governor_dbs':
+drivers/cpufreq/cpufreq_zzmoove.c:8791:7: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+       if (latency == 0)
+       ^~
+drivers/cpufreq/cpufreq_zzmoove.c:8794:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+    rc = sysfs_create_group(cpufreq_global_kobject,
+    ^~
+drivers/hid/hid-samsung.c: In function 'samsung_kbd_input_mapping':
+drivers/hid/hid-samsung.c:146:21: warning: statement will never be executed [-Wswitch-unreachable]
+   set_bit(EV_REP, hi->input->evbit);
+                   ~~^~~~~~~
+drivers/hid/hid-samsung.c: In function 'samsung_universal_kbd_input_mapping':
+drivers/hid/hid-samsung.c:279:21: warning: statement will never be executed [-Wswitch-unreachable]
+   set_bit(EV_REP, hi->input->evbit);
+                   ~~^~~~~~~
+In file included from drivers/input/touchscreen/stm/fts7/fts_ts.c:885:0:
+drivers/input/touchscreen/stm/fts7/fts_sec.c: In function 'store_cmd':
+drivers/input/touchscreen/stm/fts7/fts_sec.c:459:2: warning: 'memset' used with length equal to number of elements without multiplication by element size [-Wmemset-elt-size]
+  memset(info->cmd_param, 0x00, ARRAY_SIZE(info->cmd_param));
+  ^~~~~~
+drivers/input/touchscreen/sec_ts/sec_ts_fn.c: In function 'cmd_store':
+drivers/input/touchscreen/sec_ts/sec_ts_fn.c:502:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+    if (ts->delayed_cmd_param[0] > 1)
+    ^~
+drivers/input/touchscreen/sec_ts/sec_ts_fn.c:504:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+     schedule_delayed_work(&ts->cover_cmd_work, msecs_to_jiffies(10));
+     ^~~~~~~~~~~~~~~~~~~~~
+drivers/media/platform/exynos/fimc-is2/fimc-is-device-csi_v2.c: In function 'csi_stream_on':
+drivers/media/platform/exynos/fimc-is2/fimc-is-device-csi_v2.c:1045:3: warning: 'memset' used with length equal to number of elements without multiplication by element size [-Wmemset-elt-size]
+   memset(csi->pre_dma_enable, -1, ARRAY_SIZE(csi->pre_dma_enable));
+   ^~~~~~
+drivers/hid/hid-synaptics-bt.c: In function 'samsung_bookcover_input_mapping':
+drivers/hid/hid-synaptics-bt.c:247:21: warning: statement will never be executed [-Wswitch-unreachable]
+   set_bit(EV_REP, hi->input->evbit);
+                   ~~^~~~~~~
+drivers/hid/hid-madcatz.c: In function 'madcatz_universal_kbd_input_mapping':
+drivers/hid/hid-madcatz.c:80:21: warning: statement will never be executed [-Wswitch-unreachable]
+   set_bit(EV_REP, hi->input->evbit);
+                   ~~^~~~~~~
+net/ipv4/tcp_output.c: In function 'tcp_trim_head':
+net/ipv4/tcp_output.c:1407:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  u32 delta_truesize;
+  ^~~
+In file included from drivers/misc/modem_v1/modem_main.c:49:0:
+drivers/misc/modem_v1/modem_prj.h:273:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *rx_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/modem_main.c:51:0:
+drivers/misc/modem_v1/modem_utils.h:111:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *sipc_layer_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:126:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *dev_format_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:150:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:163:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *udl_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:176:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *q_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:189:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *ipc_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:202:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *arrow_direction[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:215:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *modem_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/modem_variation.h:18:0,
+                 from drivers/misc/modem_v1/modem_variation.c:15:
+drivers/misc/modem_v1/modem_prj.h:273:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *rx_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/modem_io_device.c:27:0:
+drivers/misc/modem_v1/modem_prj.h:273:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *rx_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/modem_io_device.c:28:0:
+drivers/misc/modem_v1/modem_utils.h:111:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *sipc_layer_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:126:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *dev_format_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:150:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:163:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *udl_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:176:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *q_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:189:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *ipc_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:202:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *arrow_direction[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:215:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *modem_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/modem_utils.c:44:0:
+drivers/misc/modem_v1/modem_prj.h:273:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *rx_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/modem_utils.c:45:0:
+drivers/misc/modem_v1/modem_utils.h:111:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *sipc_layer_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:126:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *dev_format_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:150:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:163:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *udl_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:176:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *q_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:189:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *ipc_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:202:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *arrow_direction[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:215:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *modem_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/link_device_shmem.c:38:0:
+drivers/misc/modem_v1/modem_prj.h:273:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *rx_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/link_device_shmem.c:39:0:
+drivers/misc/modem_v1/modem_utils.h:111:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *sipc_layer_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:126:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *dev_format_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:150:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:163:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *udl_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:176:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *q_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:189:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *ipc_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:202:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *arrow_direction[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:215:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *modem_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/link_device_memory_snapshot.c:18:0:
+drivers/misc/modem_v1/modem_prj.h:273:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *rx_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/link_device_memory_snapshot.c:19:0:
+drivers/misc/modem_v1/modem_utils.h:111:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *sipc_layer_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:126:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *dev_format_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:150:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:163:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *udl_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:176:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *q_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:189:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *ipc_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:202:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *arrow_direction[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:215:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *modem_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/link_device_memory_flow_control.c:28:0:
+drivers/misc/modem_v1/modem_prj.h:273:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *rx_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/link_device_memory_flow_control.c:29:0:
+drivers/misc/modem_v1/modem_utils.h:111:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *sipc_layer_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:126:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *dev_format_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:150:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:163:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *udl_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:176:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *q_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:189:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *ipc_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:202:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *arrow_direction[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:215:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *modem_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/link_device_memory_debug.c:28:0:
+drivers/misc/modem_v1/modem_prj.h:273:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *rx_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/link_device_memory_debug.c:29:0:
+drivers/misc/modem_v1/modem_utils.h:111:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *sipc_layer_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:126:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *dev_format_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:150:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:163:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *udl_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:176:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *q_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:189:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *ipc_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:202:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *arrow_direction[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:215:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *modem_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/link_device_memory_sbd.c:22:0:
+drivers/misc/modem_v1/modem_prj.h:273:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *rx_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/link_device_memory_sbd.c:23:0:
+drivers/misc/modem_v1/modem_utils.h:111:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *sipc_layer_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:126:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *dev_format_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:150:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:163:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *udl_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:176:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *q_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:189:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *ipc_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:202:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *arrow_direction[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:215:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *modem_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/modem_ctrl_ss310ap.c:25:0:
+drivers/misc/modem_v1/modem_prj.h:273:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *rx_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/modem_ctrl_ss310ap.c:26:0:
+drivers/misc/modem_v1/modem_utils.h:111:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *sipc_layer_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:126:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *dev_format_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:150:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:163:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *udl_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:176:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *q_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:189:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *ipc_direction_string[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:202:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *arrow_direction[] = {
+                   ^~~~~
+drivers/misc/modem_v1/modem_utils.h:215:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *modem_state_string[] = {
+                   ^~~~~
+In file included from drivers/misc/modem_v1/pmu-cp.h:15:0,
+                 from drivers/misc/modem_v1/pmu-cp.c:10:
+drivers/misc/modem_v1/modem_prj.h:273:19: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ static const char const *rx_state_string[] = {
+                   ^~~~~
+In file included from drivers/media/platform/exynos/fimc-is2/sensor/flite/fimc-is-hw-flite-v4_20_0.c:20:0:
+drivers/media/platform/exynos/fimc-is2/sensor/flite/fimc-is-hw-flite-v4_20_0.c: In function 'flite_hw_enable_bns':
+drivers/media/platform/exynos/fimc-is2/sensor/flite/fimc-is-hw-flite-v4_20_0.h:112:45: warning: '~' on a boolean expression [-Wbool-operation]
+ #define FLITE_REG_BINNINGON_CLKGATE_ON(x)  (~(x) << 1)
+                                             ^
+drivers/media/platform/exynos/fimc-is2/sensor/flite/fimc-is-hw-flite-v4_20_0.c:28:9: note: in expansion of macro 'FLITE_REG_BINNINGON_CLKGATE_ON'
+  cfg |= FLITE_REG_BINNINGON_CLKGATE_ON(enable);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+drivers/media/platform/exynos/fimc-is2/sensor/flite/fimc-is-hw-flite-v4_20_0.h:112:45: note: did you mean to use logical not?
+ #define FLITE_REG_BINNINGON_CLKGATE_ON(x)  (~(x) << 1)
+                                             ^
+drivers/media/platform/exynos/fimc-is2/sensor/flite/fimc-is-hw-flite-v4_20_0.c:28:9: note: in expansion of macro 'FLITE_REG_BINNINGON_CLKGATE_ON'
+  cfg |= FLITE_REG_BINNINGON_CLKGATE_ON(enable);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+drivers/net/wireless/bcmdhd4359/dhd_common.c: In function 'dhd_pktfilter_offload_set':
+drivers/net/wireless/bcmdhd4359/dhd_common.c:2836:16: warning: comparison between pointer and zero character constant [-Wpointer-compare]
+    if (argv[i] == '\0') {
+                ^~
+drivers/net/wireless/bcmdhd4359/dhd_common.c:2836:8: note: did you mean to dereference the pointer?
+    if (argv[i] == '\0') {
+        ^
+drivers/sensorhub/brcm/bbdpl/bbd.c: In function 'store_sysfs_lk_timeout':
+drivers/sensorhub/brcm/bbdpl/bbd.c:806:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+     if(bbd.lk.timeout_sec < 10)
+     ^~
+drivers/sensorhub/brcm/bbdpl/bbd.c:808:2: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  return status ? : len;
+  ^~~~~~
+drivers/net/wireless/bcmdhd4359/siutils.c: In function 'si_doattach':
+drivers/net/wireless/bcmdhd4359/siutils.c:541:14: warning: self-comparison always evaluates to false [-Wtautological-compare]
+  if (bustype != BUSTYPE(bustype)) {
+              ^~
+drivers/tty/serial/samsung.c: In function 's3c24xx_serial_bt_log':
+drivers/tty/serial/samsung.c:1687:9: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+         if (port && port->state->pm_state == UART_PM_STATE_ON)
+         ^~
+drivers/tty/serial/samsung.c:1689:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   return 0;
+   ^~~~~~
+drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c: In function 'decon_reg_set_int':
+drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:1774:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   if (psr->psr_mode == DECON_MIPI_COMMAND_MODE)
+   ^~
+drivers/video/fbdev/exynos/decon_8890/decon_reg_8890.c:1776:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+    val |= INTERRUPT_DISPIF_VSTATUS_INT_EN | INTERRUPT_DISPIF_VSTATUS_VSA;
+    ^~~
+In file included from drivers/usb/gadget/android.c:41:0:
+./drivers/usb/gadget/udc/../function/f_mtp_samsung.c: In function 'mtp_bind_config':
+./drivers/usb/gadget/udc/../function/f_mtp_samsung.c:1773:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   if (status < 0)
+   ^~
+./drivers/usb/gadget/udc/../function/f_mtp_samsung.c:1776:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+    strings_dev_mtp[F_MTP_IDX].id = status;
+    ^~~~~~~~~~~~~~~
+In file included from drivers/usb/gadget/android.c:52:0:
+./drivers/usb/gadget/udc/../function/u_ether.c: In function 'alloc_tx_buffer':
+./drivers/usb/gadget/udc/../function/u_ether.c:784:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   if (!req->buf)
+   ^~
+./drivers/usb/gadget/udc/../function/u_ether.c:787:4: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+    if (!req->buf)
+    ^~
+In file included from drivers/usb/gadget/android.c:150:0:
+./drivers/usb/gadget/udc/../function/f_conn_gadget.c: In function 'conn_gadget_cleanup':
+./drivers/usb/gadget/udc/../function/f_conn_gadget.c:1213:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+     if (_conn_gadget_dev->rd_queue_buf)
+     ^~
+./drivers/usb/gadget/udc/../function/f_conn_gadget.c:1216:2: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  kfree(_conn_gadget_dev);
+  ^~~~~
+  FIPS with KALSR : Generating hmac of crypto and fmp, then update vmlinux... 
+readelf: Warning: [21]: Info field (0) should index a relocatable section.
+>>>>> Time used for generated all hashes is 8 sec
+
+
+Processing dts files
+
+=> Processing: exynos8890-herolte_eur_open_00.dts
+=> Generating: exynos8890-herolte_eur_open_00.dtb
+=> Processing: exynos8890-herolte_eur_open_01.dts
+=> Generating: exynos8890-herolte_eur_open_01.dtb
+=> Processing: exynos8890-herolte_eur_open_02.dts
+=> Generating: exynos8890-herolte_eur_open_02.dtb
+=> Processing: exynos8890-herolte_eur_open_03.dts
+=> Generating: exynos8890-herolte_eur_open_03.dtb
+=> Processing: exynos8890-herolte_eur_open_04.dts
+=> Generating: exynos8890-herolte_eur_open_04.dtb
+=> Processing: exynos8890-herolte_eur_open_08.dts
+=> Generating: exynos8890-herolte_eur_open_08.dtb
+=> Processing: exynos8890-herolte_eur_open_09.dts
+=> Generating: exynos8890-herolte_eur_open_09.dtb
+
+Generating dtb.img
+
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 0, hw_rev_end: 0)
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 1, hw_rev_end: 1)
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 2, hw_rev_end: 2)
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 3, hw_rev_end: 3)
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 4, hw_rev_end: 7)
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 8, hw_rev_end: 8)
+=> Found compatible entry: samsung,exynos8890
+    (chip: 8890, hw_rev: 9, hw_rev_end: 9)
+[3;J[H[2J 
+Android Image Kitchen - RepackImg Script
+by osm0sis @ xda-developers
+ 
+Packing ramdisk...
+ 
+Using compression: gzip
+ 
+Getting build information...
+kernel = boot.img-zImage
+cmdline = 
+board = SRPOI17A000KU
+base = 10000000
+pagesize = 2048
+kernel_offset = 00008000
+ramdisk_offset = 01000000
+second_offset = 00f00000
+tags_offset = 00000100
+os_version = 7.0.0
+os_patch_level = 2017-11
+hash = sha1
+dtb = boot.img-dtb
+ 
+Building image...
+ 
+Using format: AOSP
+ 
+Appending footer...
+ 
+Using type: SEAndroid
+ 
+Done!

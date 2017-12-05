@@ -11,11 +11,37 @@ rm: cannot remove '/home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/dtb/*.dtb':
 rm: cannot remove '/home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/boot.img-dtb': No such file or directory
 rm: cannot remove '/home/dylanneve1/kernel/S7-Kernel/arch/arm64/boot/boot.img-zImage': No such file or directory
 make: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
-Kconfig:15:warning: environment variable ANDROID_MAJOR_VERSION undefined
-***
-*** Can't find default configuration "arch/arm64/configs/SuperKernel-herolte_defconfig"!
-***
-scripts/kconfig/Makefile:105: recipe for target 'SuperKernel-herolte_defconfig' failed
-make[1]: *** [SuperKernel-herolte_defconfig] Error 1
-Makefile:572: recipe for target 'SuperKernel-herolte_defconfig' failed
-make: *** [SuperKernel-herolte_defconfig] Error 2
+#
+# configuration written to .config
+#
+make: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+make: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+make[1]: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+scripts/kconfig/conf --silentoldconfig Kconfig
+make: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+make: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: Command not found
+INFO: CC is ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc
+  CHK     include/config/kernel.release
+  CHK     include/generated/uapi/linux/version.h
+  CHK     include/generated/utsrelease.h
+  CC      scripts/mod/empty.o
+/bin/sh: 1: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: not found
+scripts/Makefile.build:257: recipe for target 'scripts/mod/empty.o' failed
+make[2]: *** [scripts/mod/empty.o] Error 127
+make[2]: *** Waiting for unfinished jobs....
+  CC      scripts/mod/devicetable-offsets.s
+/bin/sh: 1: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: not found
+scripts/Makefile.build:153: recipe for target 'scripts/mod/devicetable-offsets.s' failed
+make[2]: *** [scripts/mod/devicetable-offsets.s] Error 127
+scripts/Makefile.build:402: recipe for target 'scripts/mod' failed
+make[1]: *** [scripts/mod] Error 2
+make[1]: *** Waiting for unfinished jobs....
+Makefile:590: recipe for target 'scripts' failed
+make: *** [scripts] Error 2
+make: *** Waiting for unfinished jobs....
+  CC      kernel/bounds.s
+/bin/sh: 1: ../Toolchain/aarch64-cortex_a53-linux-gnueabi-6.4.0/bin/aarch64-cortex_a53-linux-gnueabi-gcc: not found
+Kbuild:35: recipe for target 'kernel/bounds.s' failed
+make[1]: *** [kernel/bounds.s] Error 127
+Makefile:1052: recipe for target 'prepare0' failed
+make: *** [prepare0] Error 2

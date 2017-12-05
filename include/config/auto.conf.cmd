@@ -1004,16 +1004,16 @@ deps_config := \
 include/config/auto.conf: \
 	$(deps_config)
 
-ifneq "$(KERNELVERSION)" "3.18.14"
+ifneq "$(KERNELVERSION)" "3.18.83"
 include/config/auto.conf: FORCE
 endif
 ifneq "$(ARCH)" "arm64"
 include/config/auto.conf: FORCE
 endif
-ifneq "$(ANDROID_MAJOR_VERSION)" ""
+ifneq "$(ANDROID_MAJOR_VERSION)" "7"
 include/config/auto.conf: FORCE
 endif
-ifneq "$(ANDROID_VERSION)" "990000"
+ifneq "$(ANDROID_VERSION)" "700000"
 include/config/auto.conf: FORCE
 endif
 ifneq "$(SRCARCH)" "arm64"
