@@ -7,23 +7,6 @@ Loading configuration
 Compiling zImage
 
 INFO: CC is /home/dylanneve1/android/toolchains/aarch64-cortex_a53-linux-gnueabi/bin/aarch64-cortex_a53-linux-gnueabi-gcc
-In file included from include/linux/compiler.h:54:0,
-                 from include/uapi/linux/stddef.h:1,
-                 from include/linux/stddef.h:4,
-                 from ./include/uapi/linux/posix_types.h:4,
-                 from include/uapi/linux/types.h:13,
-                 from include/linux/types.h:5,
-                 from include/linux/page-flags.h:8,
-                 from kernel/bounds.c:9:
-include/linux/compiler-gcc.h:106:1: fatal error: linux/compiler-gcc7.h: No such file or directory
- #include gcc_header(__GNUC__)
- ^~~~
-compilation terminated.
-Kbuild:35: recipe for target 'kernel/bounds.s' failed
-make[1]: *** [kernel/bounds.s] Error 1
-Makefile:1052: recipe for target 'prepare0' failed
-make: *** [prepare0] Error 2
-make: *** Waiting for unfinished jobs....
 In file included from scripts/sortextable.c:192:0:
 scripts/sortextable.h: In function ‘do32’:
 scripts/sortextable.h:107:12: warning: variable ‘sort_done_location’ set but not used [-Wunused-but-set-variable]
@@ -34,23 +17,72 @@ scripts/sortextable.h: In function ‘do64’:
 scripts/sortextable.h:107:12: warning: variable ‘sort_done_location’ set but not used [-Wunused-but-set-variable]
   uint32_t *sort_done_location;
             ^
-In file included from include/linux/compiler.h:54:0,
-                 from include/uapi/linux/stddef.h:1,
-                 from include/linux/stddef.h:4,
-                 from ./include/uapi/linux/posix_types.h:4,
+kernel/trace/trace_output.c: In function 'trace_graph_ret_raw':
+kernel/trace/trace_output.c:976:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  if (!trace_seq_printf(&iter->seq, "%lx %lld %lld %ld %d\n",
+  ^~
+kernel/trace/trace_output.c:982:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   return TRACE_TYPE_PARTIAL_LINE;
+   ^~~~~~
+kernel/sched/fair.c: In function 'move_specific_task':
+kernel/sched/fair.c:9089:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  if (throttled_lb_pair(task_group(p), env->src_rq->cpu,
+  ^~
+kernel/sched/fair.c:9093:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   if (!hmp_can_migrate_task(p, env))
+   ^~
+In file included from include/linux/percpu_counter.h:15:0,
+                 from include/linux/proportions.h:12,
+                 from include/linux/sched.h:43,
+                 from ./arch/arm64/include/asm/compat.h:25,
+                 from ./arch/arm64/include/asm/stat.h:23,
+                 from include/linux/stat.h:5,
+                 from include/linux/module.h:10,
+                 from mm/exynos_swap.c:12:
+mm/exynos_swap.c: In function 'exynos_swap_init':
+include/linux/gfp.h:112:20: warning: passing argument 2 of 'zpool_create_pool' makes pointer from integer without a cast [-Wint-conversion]
+ #define GFP_KERNEL (__GFP_WAIT | __GFP_IO | __GFP_FS)
+                    ^
+mm/exynos_swap.c:701:51: note: in expansion of macro 'GFP_KERNEL'
+  eswap.pool = zpool_create_pool(eswap_zpool_type, GFP_KERNEL, NULL);
+                                                   ^~~~~~~~~~
+In file included from mm/exynos_swap.c:19:0:
+include/linux/zpool.h:39:15: note: expected 'char *' but argument is of type 'unsigned int'
+ struct zpool *zpool_create_pool(char *type, char *name,
+               ^~~~~~~~~~~~~~~~~
+In file included from ./include/uapi/linux/posix_types.h:4:0,
                  from include/uapi/linux/types.h:13,
                  from include/linux/types.h:5,
-                 from include/linux/mod_devicetable.h:11,
-                 from scripts/mod/devicetable-offsets.c:2:
-include/linux/compiler-gcc.h:106:1: fatal error: linux/compiler-gcc7.h: No such file or directory
- #include gcc_header(__GNUC__)
- ^~~~
-compilation terminated.
-scripts/Makefile.build:153: recipe for target 'scripts/mod/devicetable-offsets.s' failed
-make[2]: *** [scripts/mod/devicetable-offsets.s] Error 1
-make[2]: *** Waiting for unfinished jobs....
-scripts/Makefile.build:402: recipe for target 'scripts/mod' failed
-make[1]: *** [scripts/mod] Error 2
+                 from include/linux/list.h:4,
+                 from include/linux/module.h:9,
+                 from mm/exynos_swap.c:12:
+include/linux/stddef.h:8:14: warning: passing argument 3 of 'zpool_create_pool' makes integer from pointer without a cast [-Wint-conversion]
+ #define NULL ((void *)0)
+              ^
+mm/exynos_swap.c:701:63: note: in expansion of macro 'NULL'
+  eswap.pool = zpool_create_pool(eswap_zpool_type, GFP_KERNEL, NULL);
+                                                               ^~~~
+In file included from mm/exynos_swap.c:19:0:
+include/linux/zpool.h:39:15: note: expected 'gfp_t {aka unsigned int}' but argument is of type 'void *'
+ struct zpool *zpool_create_pool(char *type, char *name,
+               ^~~~~~~~~~~~~~~~~
+mm/exynos_swap.c:701:15: error: too few arguments to function 'zpool_create_pool'
+  eswap.pool = zpool_create_pool(eswap_zpool_type, GFP_KERNEL, NULL);
+               ^~~~~~~~~~~~~~~~~
+In file included from mm/exynos_swap.c:19:0:
+include/linux/zpool.h:39:15: note: declared here
+ struct zpool *zpool_create_pool(char *type, char *name,
+               ^~~~~~~~~~~~~~~~~
+scripts/Makefile.build:257: recipe for target 'mm/exynos_swap.o' failed
+make[1]: *** [mm/exynos_swap.o] Error 1
 make[1]: *** Waiting for unfinished jobs....
-Makefile:590: recipe for target 'scripts' failed
-make: *** [scripts] Error 2
+Makefile:1009: recipe for target 'mm' failed
+make: *** [mm] Error 2
+make: *** Waiting for unfinished jobs....
+fs/ecryptfs/ecryptfs_dek.c: In function 'ecryptfs_update_crypt_flag':
+fs/ecryptfs/ecryptfs_dek.c:361:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+     if(list_empty(&crypt_stat->keysig_list))
+     ^~
+fs/ecryptfs/ecryptfs_dek.c:364:2: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  mutex_lock(&crypt_stat->cs_mutex);
+  ^~~~~~~~~~
