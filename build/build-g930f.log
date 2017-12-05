@@ -31,7 +31,6 @@ include/linux/compiler-gcc.h:106:1: fatal error: linux/compiler-gcc7.h: No such 
 compilation terminated.
 scripts/Makefile.build:153: recipe for target 'scripts/mod/devicetable-offsets.s' failed
 make[2]: *** [scripts/mod/devicetable-offsets.s] Error 1
-make[2]: *** Waiting for unfinished jobs....
 scripts/Makefile.build:402: recipe for target 'scripts/mod' failed
 make[1]: *** [scripts/mod] Error 2
 make[1]: *** Waiting for unfinished jobs....
